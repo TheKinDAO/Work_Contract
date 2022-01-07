@@ -1,20 +1,19 @@
 # Work_Contract
 
-Each Work_Contract is implemented split into 2 very distinct parts:
+Each Work_Contract is implemented as 2 very distinct parts:
 
 1. As *legal code*, usually as Contract Law.
 2. As *source code* usually as a Smart Contracts.
 
-The legal code is stored as a digitally-signed .pdf of a legally-binding 'paper' contract.
+The legal code is usually stored as a digitally-signed .pdf of a legally-binding 'paper' contract.
 
 The URI of the .pdf is required when the DAO calls `Work_Contract::nft_mint()`
 
 The source code at `nft/src/lib.rs` is based on https://github.com/near-examples/NFT
 
-
 Building this contract
 ======================
-This will generate our WASM binaries into our `res/` directory. This is the smart contract we'll be deploying onto the NEAR blockchain later.
+This will generate a WASM binaries in the `res/` directory to be later deployed onto the NEAR blockchain.
 ```bash
 ./setup.sh  # install nvm, curl, build-essential, rust, wasm32-unknown-unknown
 ./build.sh  # original example 
