@@ -1,5 +1,5 @@
 [package]
-name = "non-fungible-token-wrapper"
+name = "work-contract-token-wrapper"
 version = "0.0.2"
 authors = ["Near Inc <hello@near.org>"]
 edition = "2018"
@@ -10,7 +10,7 @@ near-sdk-sim = "3.2.0"
 near-contract-standards = "3.1.1"
 
 # remember to include a line for each contract
-non-fungible-token = { path = "./nft" }
+work-contract = { path = "./nft" }
 approval-receiver = { path = "./test-approval-receiver" }
 token-receiver = { path = "./test-token-receiver" }
 

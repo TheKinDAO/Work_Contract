@@ -1,33 +1,28 @@
-# Work Contract (no underscore)
+# Work_Contract
 
-Each Work Contract is implemented as *legal code* (through contract law) to **bind** commitments of future production.
+Each Work_Contract is implemented split into 2 very distinct parts:
 
+1. As *legal code*, usually as Contract Law.
+2. As *source code* usually as a Smart Contracts.
 
-# Work_Contract (with underscore)
+The legal code is stored as a digitally-signed .pdf of a legally-binding 'paper' contract.
 
-Each `Work_Contract` is implemented as *source code* (as a smart contract) to automate some 'state' changes, and also as **oracles** to read and write IRL 'events'.
+The URI of the .pdf is required when the DAO calls `Work_Contract::nft_mint()`
 
+The source code at `nft/src/lib.rs` is based on https://github.com/near-examples/NFT
 
-The "non-fungible token (NFT)" portion is based on https://github.com/near-examples/NFT
-
-[non-fungible token]: https://nomicon.io/Standards/NonFungibleToken/README.html
-[near-contract-standards]: https://github.com/near/near-sdk-rs/tree/master/near-contract-standards
-[simulation]: https://github.com/near/near-sdk-rs/tree/master/near-sdk-sim
-
-run `./setup.sh`
-
-The source for this contract is in `nft/src/lib.rs`. It provides methods to manage access to tokens, transfer tokens, check access, and get token owner. Note, some further exploration inside the rust macros is needed to see how the `NonFungibleToken` contract is implemented.
 
 Building this contract
 ======================
-Run the following, and we'll build our rust project up via cargo. This will generate our WASM binaries into our `res/` directory. This is the smart contract we'll be deploying onto the NEAR blockchain later.
+This will generate our WASM binaries into our `res/` directory. This is the smart contract we'll be deploying onto the NEAR blockchain later.
 ```bash
-./build.sh
+./setup.sh  # install nvm, curl, build-essential, rust, wasm32-unknown-unknown
+./build.sh  # original example 
 ```
 
 Testing this contract
 =====================
-We have some tests that you can run. For example, the following will run our simple tests to verify that our contract code is working.
+Simple tests to verify contract is working.
 ```bash
 cargo test -- --nocapture
 ```

@@ -8,8 +8,7 @@ npm install -g npm
 npm install -g near-cli
 
 if [[ -f /usr/bin/apt-get ]]; then
-    sudo apt-get install curl  # snap does not install curl correctly on lUbuntu
-    sudo apt-get install build-essential
+    sudo apt-get install curl  build-essential  libclang-dev
 fi
 
 # install Rust

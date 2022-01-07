@@ -58,7 +58,7 @@ impl Contract {
             NFTContractMetadata {
                 spec: NFT_METADATA_SPEC.to_string(),
                 name: "Work_Contract".to_string(),
-                symbol: "WRKCNTRCT".to_string(),
+                symbol: "WORKCONTRACT".to_string(),
                 icon: Some(DATA_IMAGE_SVG_NEAR_ICON.to_string()),
                 base_uri: None,
                 reference: None,
@@ -85,10 +85,8 @@ impl Contract {
 
     /// Mint a new token with ID=`token_id` belonging to `receiver_id`.
     ///
-    /// Since this example implements metadata, it also requires per-token metadata to be provided
-    /// in this call. `self.tokens.mint` will also require it to be Some, since
-    /// `StorageKey::TokenMetadata` was provided at initialization.
-    ///
+    //// `token_metadata` must include the URI of a `legal_contract`.
+
     /// `self.tokens.mint` will enforce `predecessor_account_id` to equal the `owner_id` given in
     /// initialization call to `new`.
     #[payable]
@@ -113,6 +111,10 @@ impl NonFungibleTokenMetadataProvider for Contract {
     }
 }
 
+
+////////////////////////////////////////////////////////////////
+// Tests
+////////////////////////////////////////////////////////////////
 #[cfg(all(test, not(target_arch = "wasm32")))]
 mod tests {
     use near_sdk::test_utils::{accounts, VMContextBuilder};

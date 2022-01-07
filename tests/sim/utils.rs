@@ -1,6 +1,6 @@
 use approval_receiver::ApprovalReceiverContract;
 use near_contract_standards::non_fungible_token::metadata::TokenMetadata;
-use non_fungible_token::ContractContract as NftContract;
+use work_contract::ContractContract as WorkContract;
 use token_receiver::TokenReceiverContract;
 
 use near_contract_standards::non_fungible_token::TokenId;
@@ -27,7 +27,7 @@ pub const TOKEN_ID: &str = "0";
 /// * token_receiver: a contract implementing `nft_on_transfer` for use with `transfer_and_call`
 pub fn init() -> (
     UserAccount,
-    ContractAccount<NftContract>,
+    ContractAccount<WorkContract>,
     UserAccount,
     ContractAccount<TokenReceiverContract>,
     ContractAccount<ApprovalReceiverContract>,
@@ -36,7 +36,7 @@ pub fn init() -> (
     // uses default values for deposit and gas
     let nft = deploy!(
         // Contract Proxy
-        contract: NftContract,
+        contract: WorkContract,
         // Contract account id
         contract_id: NFT_ID,
         // Bytes of contract
@@ -100,7 +100,7 @@ pub fn init() -> (
 pub fn helper_mint(
     token_id: TokenId,
     root: &UserAccount,
-    nft: &ContractAccount<NftContract>,
+    nft: &ContractAccount<WorkContract>,
     title: String,
     desc: String,
 ) {
