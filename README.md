@@ -13,7 +13,7 @@ The source code at `nft/src/lib.rs` is based on https://github.com/near-examples
 
 Building this contract
 ======================
-This will generate a WASM binaries in the `res/` directory to be later deployed onto the NEAR blockchain.
+This will generate WASM binaries in the `res/` directory to be later deployed onto the NEAR blockchain.
 ```bash
 ./setup.sh  # install nvm, curl, build-essential, rust, wasm32-unknown-unknown
 ./build.sh  # original example 
