@@ -1,6 +1,5 @@
-Each Work Contract is legally-binding contract to fulfill some portion of a Product Ticket as it passes through the supply chain.
+Each Work_Contract represents one part of the future work required to fulfill a Product Ticket as it passes through a supply chain held under the terms of the [For Product](https://docs.google.com/document/d/1cRYLXIQnNWfXNU88UvxdlKgdLfOyoXSvl4xyp6xytMU/) development model.
 
-For example, there would likely be separate contracts to grow, haul, mill and bake some bread.
+For example, there would likely be separate Work_Contracts to grow and mill and bake some bread.
 
-afad6f41555c1cfa42509045fab16406
-
+e47767c463c4aed68d7d955fd1e5f13b
