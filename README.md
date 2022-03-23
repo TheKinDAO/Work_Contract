@@ -1,23 +1,21 @@
 # Work_Contract
 
-Each Work_Contract is implemented split into 2 very distinct parts:
-
-1. As *legal code*, usually as Contract Law.
-2. As *source code* usually as a Smart Contracts.
-
-The legal code is stored as a digitally-signed .pdf of a legally-binding 'paper' contract.
-
-The URI of the .pdf is required when the DAO calls `Work_Contract::nft_mint()`
+See ./Ricardian.txt
 
 The source code at `nft/src/lib.rs` is based on https://github.com/near-examples/NFT
 
+Calling `Work_Contract::nft_mint()` requires these parameters:
+    The URI of the 'internet' location where the *legal code* is being stored (IPFS, ArWeave, http, ftp, etc.)
+    A User_Account NFT as the specific person scheduled to **fulfill** that future production.
+    A list of Product_Ticket NFTs being **fulfilled** by that future production.
+    A list of Source_Title NFTs **vesting** to the User_Account who **fulfills** that future production.
 
 Building this contract
 ======================
 This will generate our WASM binaries into our `res/` directory. This is the smart contract we'll be deploying onto the NEAR blockchain later.
 ```bash
-./setup.sh  # install nvm, curl, build-essential, rust, wasm32-unknown-unknown
-./build.sh  # original example 
+./setup.sh  # install dependencies
+./build.sh
 ```
 
 Testing this contract
@@ -26,7 +24,7 @@ Simple tests to verify contract is working.
 ```bash
 cargo test -- --nocapture
 ```
-The more complex simulation tests aren't run with this command, but we can find them in `tests/sim`.
+The more complex simulation tests aren't run with this command, but we can +find them in `tests/sim`.
 
 Using this contract
 ===================

@@ -1,0 +1,6 @@
+Each Work Contract is legally-binding contract to fulfill some portion of a Product Ticket as it passes through the supply chain.
+
+For example, there would likely be separate contracts to grow, haul, mill and bake some bread.
+
+afad6f41555c1cfa42509045fab16406
+
