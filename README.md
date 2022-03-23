@@ -2,17 +2,9 @@
 
 See ./Ricardian.txt
 
-The source code at `nft/src/lib.rs` is based on https://github.com/near-examples/NFT
-
-Calling `Work_Contract::nft_mint()` requires these parameters:
-    The URI of the 'internet' location where the *legal code* is being stored (IPFS, ArWeave, http, ftp, etc.)
-    A User_Account NFT as the specific person scheduled to **fulfill** that future production.
-    A list of Product_Ticket NFTs being **fulfilled** by that future production.
-    A list of Source_Title NFTs **vesting** to the User_Account who **fulfills** that future production.
-
 Building this contract
 ======================
-This will generate our WASM binaries into our `res/` directory. This is the smart contract we'll be deploying onto the NEAR blockchain later.
+This will generate WASM binaries in the `res/` directory to be later deployed onto the NEAR blockchain.
 ```bash
 ./setup.sh  # install dependencies
 ./build.sh
