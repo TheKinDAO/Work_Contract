@@ -2,6 +2,8 @@
 
 See ./Ricardian.txt
 
+All of the code and the following README.md are from a Near.org example.
+
 Building this contract
 ======================
 This will generate WASM binaries in the `res/` directory to be later deployed onto the NEAR blockchain.
